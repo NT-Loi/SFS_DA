@@ -1,7 +1,7 @@
 import numpy as np
-import util
-import conditioning
-import pivot
+import sfs_da.util as util
+import sfs_da.pivot as pivot 
+import sfs_da.conditioning as conditioning
 
 def divide_and_conquer_Lasso(X, a, b, ns, nt, Lambda, zmin, zmax):
     list_intervals = []

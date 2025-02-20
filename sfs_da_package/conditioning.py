@@ -1,5 +1,5 @@
 import numpy as np
-import util
+import sfs_da.util as util
 
 def solve_linear_unequalities(left, right):
     # Solve unequality has the form of ax >= b
