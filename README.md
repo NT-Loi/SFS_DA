@@ -28,7 +28,7 @@ $ pip install sfs_da
 
 ## Usage
 
-We provide several Jupyter notebooks demonstrating how to use the sfs-da package in our [examples directory](https://github.com/NT-Loi/SFS_DA).
+We provide several Jupyter notebooks demonstrating how to use the sfs-da package in our [examples directory]([https://github.com/NT-Loi/SFS_DA](https://github.com/NT-Loi/SFS_DA/tree/main/examples)).
 
 - Example for computing $p$-value for Lasso after DA
 ```
