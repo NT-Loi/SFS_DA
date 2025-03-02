@@ -20,6 +20,27 @@ We recommend to install or update anaconda to the latest version and use Python 
 
 **NOTE**: We use scipy package (version 1.13.1) to solve the linear program (simplex method). However, the default package does not return the set of basic variables. Therefore, we slightly modified the package so that it can return the set of basic variables by replacing the two files '_linprog.py' and '_linprog_simplex.py' in scipy.optimize module with our modified files in the folder 'files_to_replace'.
 
+### How to Automatically Replace the Files  
+If Using Anaconda
+- First, initialize and activate the target environment (if you want to use your conda base environment, you should replace 'your-env-name' by 'base'):  
+```bash
+$ conda init
+$ conda activate your-env-name
+```
+
+- Then, run the following command to replace the necessary files:
+
+``` bash
+python replace_scipy_linprog.py --env anaconda --dir files_to_replace
+```
+
+If Using System Python (Non-Anaconda)
+-Run the following command:
+
+```bash
+$ python replace_scipy_linprog.py --env python --dir files_to_replace
+```
+
 ## Installation
 This package can be installed using pip:
 ```bash
