@@ -1,8 +1,5 @@
 # Statistical Inference for Feature Selection after Optimal Transport-based Domain Adaptation (AISTATS 2025)
 
-[![PyPI version](https://badge.fury.io/py/sfs-da.svg)](https://badge.fury.io/py/sfs-da)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 This package implements a statistical inference for feature selection (FS) after optimal transport-based domain adaptation (OT-based DA). The main idea is to  leverages the SI framework and employs a divide-and conquer approach to efficiently compute the $p$-value. By providing valid $p$-values for the selected features, our proposed method not only controls the false positive rate (FPR) in FS under DA but also maximizes the true positive rate (TPR), i.e., reducing the false negative rate (FNR).
 We believe this study represents a significant step toward controllable machine learning in the context of DA. 
 
@@ -18,7 +15,7 @@ This package has the following requirements:
 
 We recommend to install or update anaconda to the latest version and use Python 3 (We used Python 3.12.3).
 
-**NOTE**: We use scipy package (version 1.13.1) to solve the linear program (simplex method). However, the default package does not return the set of basic variables. Therefore, we slightly modified the package so that it can return the set of basic variables by replacing the two files '_linprog.py' and '_linprog_simplex.py' in scipy.optimize module with our modified files in the folder 'files_to_replace'.
+**NOTE**: We use scipy package (version 1.13.1) to solve the linear program (simplex method). However, the default package does not return the set of basic variables. Therefore, we slightly modified the package so that it can return the set of basic variables by replacing the two files '_linprog.py' and '_linprog_simplex.py' in scipy.optimize module with our modified files in the folder 'files_to_replace' at [files_to_replace](https://github.com/NT-Loi/SFS_DA/tree/main/files_to_replace).
 
 ### How to Automatically Replace the Files  
 If Using Anaconda
@@ -28,14 +25,13 @@ $ conda init
 $ conda activate your-env-name
 ```
 
-- Then, run the following command to replace the necessary files:
+- Then, run the following command to replace the necessary files (file 'replace_scipy_linprog.py' is available at: [replace_scipy_linprog.py](https://github.com/NT-Loi/SFS_DA/blob/main/replace_scipy_linprog.py)):
 
 ``` bash
 python replace_scipy_linprog.py --env anaconda --dir files_to_replace
 ```
 
-If Using System Python (Non-Anaconda)
--Run the following command:
+If Using System Python (Non-Anaconda) - Run the following command:
 
 ```bash
 $ python replace_scipy_linprog.py --env python --dir files_to_replace
@@ -49,7 +45,7 @@ $ pip install sfs_da
 
 ## Usage
 
-We provide several Jupyter notebooks demonstrating how to use the sfs-da package in our [examples directory](https://github.com/NT-Loi/SFS_DA).
+We provide several Jupyter notebooks demonstrating how to use the sfs-da package in our [examples directory](https://github.com/NT-Loi/SFS_DA/tree/main/examples).
 
 - Example for computing $p$-value for Lasso after DA
 ```
